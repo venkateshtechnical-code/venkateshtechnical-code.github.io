@@ -1,0 +1,492 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b1220">
+<meta name="description" content="Venkatesh Mamidala — Enterprise Infrastructure & Platforms Technical Lead. Storage, virtualization, cloud, data protection and disaster recovery.">
+<title>Venkatesh Mamidala | Enterprise Infrastructure Leader</title>
+<style>
+:root {
+  --bg:#0b1220;
+  --panel:#111d30;
+  --panel2:#15243a;
+  --text:#e8eef7;
+  --muted:#9aabc0;
+  --accent:#48d5d2;
+  --blue:#72aaff;
+  --border:#263750;
+  --max:1120px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:85px}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:Inter,Segoe UI,Arial,sans-serif;line-height:1.7;
+}
+a{color:inherit;text-decoration:none}
+.container{width:min(92%,var(--max));margin:auto}
+header{
+  position:sticky;top:0;z-index:20;
+  background:rgba(11,18,32,.94);
+  backdrop-filter:blur(15px);
+  border-bottom:1px solid var(--border);
+}
+nav{height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:23px;font-weight:800;color:var(--accent)}
+.navlinks{display:flex;gap:24px;align-items:center}
+.navlinks a{font-size:13px;color:var(--muted)}
+.navlinks a:hover{color:var(--accent)}
+.menu{display:none;background:none;border:1px solid var(--border);
+  color:var(--text);padding:8px 12px;border-radius:8px}
+.hero{
+  padding:105px 0 75px;
+  background:radial-gradient(ellipse at 80% 10%,#123b5055,transparent 45%);
+}
+.eyebrow{
+  color:var(--accent);font-size:12px;font-weight:700;
+  letter-spacing:2px;text-transform:uppercase;
+}
+h1{font-size:clamp(38px,6vw,68px);line-height:1.1;
+  letter-spacing:-2px;margin:18px 0}
+h1 span{color:var(--accent)}
+h2{font-size:30px;letter-spacing:-.7px;margin:0 0 12px}
+h3{font-size:19px;margin:0 0 10px}
+.lead{max-width:780px;color:#c1cede;font-size:18px}
+.muted{color:var(--muted)}
+.actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:12px 19px;border-radius:8px;font-size:14px;
+  font-weight:700;border:1px solid var(--border);
+}
+.primary{background:var(--accent);color:#07141c;border-color:var(--accent)}
+.secondary{background:var(--panel);color:var(--text)}
+.btn:hover{transform:translateY(-2px);transition:.2s}
+.tags{display:flex;gap:9px;flex-wrap:wrap;margin-top:28px}
+.tag{
+  font-size:12px;padding:6px 11px;border-radius:20px;
+  border:1px solid var(--border);color:#b8d4e4;background:#102033;
+}
+section{padding:75px 0;border-top:1px solid #1b2b40}
+.section-intro{max-width:720px;color:var(--muted);margin-bottom:30px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:17px}
+.grid.three{grid-template-columns:repeat(3,1fr)}
+.card{
+  background:linear-gradient(145deg,var(--panel),#0e1929);
+  border:1px solid var(--border);border-radius:13px;padding:23px;
+}
+.card p{color:var(--muted);font-size:14px;margin:8px 0}
+.card ul{padding-left:18px;color:#c0cddd;font-size:13px}
+.card li{margin:5px 0}
+.metric-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:13px;margin-top:42px;
+}
+.metric{
+  padding:21px;border:1px solid var(--border);
+  border-radius:12px;background:var(--panel);
+}
+.metric strong{display:block;font-size:29px;color:var(--accent)}
+.metric span{font-size:12px;color:var(--muted)}
+.project-type{
+  color:var(--accent);font-size:11px;
+  text-transform:uppercase;letter-spacing:1.4px;font-weight:700;
+}
+.project{display:flex;flex-direction:column;min-height:235px}
+.project .tags{margin-top:auto;padding-top:15px}
+.project .tag{font-size:10px}
+.timeline{border-left:2px solid #28475c;margin-left:8px;padding-left:25px}
+.job{position:relative;margin-bottom:34px}
+.job:before{
+  content:"";position:absolute;left:-33px;top:7px;
+  width:13px;height:13px;border-radius:50%;
+  background:var(--accent);box-shadow:0 0 0 5px var(--bg);
+}
+.job-date{font-size:12px;color:var(--accent);font-weight:700}
+.job h3{margin:5px 0}
+.job ul{color:#bac9d8;font-size:14px;padding-left:19px}
+.job li{margin:7px 0}
+.skills-group{margin-bottom:16px}
+.skills-group h3{color:var(--accent);font-size:15px}
+.skill-list{display:flex;flex-wrap:wrap;gap:8px}
+.skill{
+  padding:7px 11px;background:#14253a;border:1px solid var(--border);
+  border-radius:7px;color:#d0deeb;font-size:12px;
+}
+.cert-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.cert{
+  background:var(--panel);padding:15px;border:1px solid var(--border);
+  border-radius:9px;font-size:13px;
+}
+.contact{
+  text-align:center;padding:65px 25px;
+  background:linear-gradient(135deg,#122d3e,#14233b);
+  border:1px solid var(--border);border-radius:16px;
+}
+.contact p{color:#b8c8d9;max-width:650px;margin:15px auto}
+footer{padding:28px 0;color:var(--muted);font-size:12px}
+.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+@media(max-width:800px){
+ .grid.three{grid-template-columns:repeat(2,1fr)}
+ .metric-grid{grid-template-columns:repeat(2,1fr)}
+ .navlinks{
+   display:none;position:absolute;top:72px;left:0;right:0;
+   background:#101b2c;padding:20px;flex-direction:column;
+   align-items:flex-start;border-bottom:1px solid var(--border);
+ }
+ .navlinks.open{display:flex}
+ .menu{display:block}
+}
+@media(max-width:560px){
+ .grid,.grid.three,.cert-list{grid-template-columns:1fr}
+ .hero{padding:75px 0 55px}
+ section{padding:55px 0}
+ h2{font-size:25px}
+ .lead{font-size:16px}
+}
+</style>
+</head>
+<body>
+
+<header>
+ <nav class="container">
+  <a href="#home" class="logo">VM.</a>
+  <button class="menu" onclick="document.querySelector('.navlinks').classList.toggle('open')" aria-label="Toggle navigation">☰</button>
+  <div class="navlinks">
+   <a href="#about">About</a>
+   <a href="#expertise">Expertise</a>
+   <a href="#projects">Projects</a>
+   <a href="#experience">Experience</a>
+   <a href="#certifications">Certifications</a>
+   <a href="#contact">Contact</a>
+  </div>
+ </nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+ <div class="container">
+  <div class="eyebrow">Open to leadership opportunities · India & International</div>
+  <h1>Venkatesh<br><span>Mamidala.</span></h1>
+  <h2>Enterprise Infrastructure & Platforms Technical Lead</h2>
+  <p class="lead">
+   Driving enterprise infrastructure engineering across Storage,
+   Virtualization, Cloud, Data Protection and Disaster Recovery.
+   Combining deep technical expertise with engineering leadership,
+   operational governance and infrastructure strategy.
+  </p>
+  <div class="actions">
+   <a class="btn primary" href="#projects">Explore Engineering Work →</a>
+   <a class="btn secondary" href="Venkatesh_Mamidala_Enterprise_Infrastructure_CV.pdf" download>Download Resume ↓</a>
+   <a class="btn secondary" href="mailto:venkatesh.technical@gmail.com">Contact Me</a>
+  </div>
+  <div class="tags">
+   <span class="tag">Enterprise Storage</span>
+   <span class="tag">Virtualization</span>
+   <span class="tag">Cloud Infrastructure</span>
+   <span class="tag">Data Protection</span>
+   <span class="tag">DR Strategy</span>
+   <span class="tag">Engineering Leadership</span>
+  </div>
+  <div class="metric-grid">
+   <div class="metric"><strong>11+</strong><span>Years of IT experience</span></div>
+   <div class="metric"><strong>300+</strong><span>Storage systems</span></div>
+   <div class="metric"><strong>60–72 PB</strong><span>Directly administered capacity</span></div>
+   <div class="metric"><strong>~200 PB</strong><span>Broader service delivery portfolio</span></div>
+  </div>
+ </div>
+</section>
+
+<section id="about">
+ <div class="container">
+  <div class="eyebrow">01 / About</div>
+  <h2>Engineering leadership backed by infrastructure depth.</h2>
+  <p class="section-intro">
+   Enterprise infrastructure professional with 11+ years of IT experience,
+   including 2.5+ years in technical leadership. Currently leading Storage
+   and Backup infrastructure operations at AHEAD.
+  </p>
+  <div class="grid">
+   <article class="card">
+    <h3>Technical ownership</h3>
+    <p>Experience across large-scale enterprise storage, backup and data
+    protection platforms supporting more than 50 customers.</p>
+   </article>
+   <article class="card">
+    <h3>Engineering leadership</h3>
+    <p>Technical direction, escalation management, engineering governance,
+    operational performance and capability development.</p>
+   </article>
+   <article class="card">
+    <h3>Operational resilience</h3>
+    <p>Production incident management, root cause analysis, disaster
+    recovery readiness, capacity and performance management.</p>
+   </article>
+   <article class="card">
+    <h3>Continuous improvement</h3>
+    <p>Automation, standardization, infrastructure health checks,
+    operational simplification and service quality improvement.</p>
+   </article>
+  </div>
+ </div>
+</section>
+
+<section id="expertise">
+ <div class="container">
+  <div class="eyebrow">02 / Technical Expertise</div>
+  <h2>Enterprise technology toolkit.</h2>
+  <p class="section-intro">Multi-platform infrastructure experience spanning
+  storage engineering, data protection, virtualization, cloud and production operations.</p>
+  <div class="grid">
+   <article class="card skills-group">
+    <h3>Enterprise Storage</h3>
+    <div class="skill-list">
+     <span class="skill">NetApp ONTAP</span><span class="skill">ONTAP Select</span>
+     <span class="skill">Dell PowerMax</span><span class="skill">EMC VMAX</span>
+     <span class="skill">VNX</span><span class="skill">Unity</span>
+     <span class="skill">Isilon / PowerScale</span><span class="skill">IBM Storage</span>
+     <span class="skill">Pure Storage</span>
+    </div>
+   </article>
+   <article class="card skills-group">
+    <h3>Backup & Data Protection</h3>
+    <div class="skill-list">
+     <span class="skill">Commvault</span><span class="skill">Veeam</span>
+     <span class="skill">Cohesity</span><span class="skill">Rubrik</span>
+     <span class="skill">IBM TSM</span><span class="skill">EMC DMZ</span>
+    </div>
+   </article>
+   <article class="card skills-group">
+    <h3>Virtualization & Cloud</h3>
+    <div class="skill-list">
+     <span class="skill">VMware vSphere</span><span class="skill">IBM SoftLayer</span>
+     <span class="skill">Private Cloud</span><span class="skill">Cloud-integrated Storage</span>
+    </div>
+   </article>
+   <article class="card skills-group">
+    <h3>SAN, NAS & Connectivity</h3>
+    <div class="skill-list">
+     <span class="skill">SAN</span><span class="skill">NAS</span>
+     <span class="skill">DAS</span><span class="skill">Fibre Channel</span>
+     <span class="skill">iSCSI</span><span class="skill">NFS</span>
+     <span class="skill">SMB / CIFS</span><span class="skill">Brocade SAN</span>
+     <span class="skill">SnapMirror</span>
+    </div>
+   </article>
+   <article class="card skills-group">
+    <h3>Automation & Engineering</h3>
+    <div class="skill-list">
+     <span class="skill">Python</span><span class="skill">PowerShell</span>
+     <span class="skill">Infrastructure Health Checks</span>
+     <span class="skill">Operational Automation</span>
+    </div>
+   </article>
+   <article class="card skills-group">
+    <h3>Infrastructure Operations</h3>
+    <div class="skill-list">
+     <span class="skill">Incident Management</span><span class="skill">Problem Management</span>
+     <span class="skill">RCA</span><span class="skill">SLA / OLA</span>
+     <span class="skill">Capacity Management</span><span class="skill">Performance</span>
+     <span class="skill">DR Readiness</span><span class="skill">Service Delivery</span>
+    </div>
+   </article>
+  </div>
+ </div>
+</section>
+
+<section id="projects">
+ <div class="container">
+  <div class="eyebrow">03 / Selected Engineering Work</div>
+  <h2>Infrastructure initiatives & contributions.</h2>
+  <p class="section-intro">Selected examples of engineering contributions drawn from professional experience.</p>
+  <div class="grid">
+   <article class="card project">
+    <div class="project-type">Automation · Python · PowerShell</div>
+    <h3>Multi-platform Infrastructure Health Checks</h3>
+    <p>Developed five infrastructure health-check scripts to execute
+    predefined checks across NetApp, Dell, Brocade, Cisco and Pure platforms.</p>
+    <div class="tags"><span class="tag">Python</span><span class="tag">PowerShell</span><span class="tag">Multi-vendor</span></div>
+   </article>
+   <article class="card project">
+    <div class="project-type">Storage Engineering · Enterprise Scale</div>
+    <h3>Enterprise Storage Operations</h3>
+    <p>Technical ownership across 300+ storage systems and approximately
+    60–72 PB of directly administered storage capacity.</p>
+    <div class="tags"><span class="tag">NetApp</span><span class="tag">Dell EMC</span><span class="tag">Pure Storage</span></div>
+   </article>
+   <article class="card project">
+    <div class="project-type">Migration · Modernization</div>
+    <h3>Enterprise Storage Migration</h3>
+    <p>Delivered storage migration initiatives including NetApp 7-Mode
+    to Cluster-Mode, EMC-to-NetApp and 7-Mode to 7-Mode migrations.</p>
+    <div class="tags"><span class="tag">NetApp 7MTT</span><span class="tag">EMC</span><span class="tag">SAN</span></div>
+   </article>
+   <article class="card project">
+    <div class="project-type">Data Protection · Resilience</div>
+    <h3>Backup & Disaster Recovery Operations</h3>
+    <p>Supported enterprise backup, replication, disaster recovery
+    readiness, recovery operations and data protection across multiple platforms.</p>
+    <div class="tags"><span class="tag">Commvault</span><span class="tag">Veeam</span><span class="tag">Cohesity</span><span class="tag">Rubrik</span></div>
+   </article>
+  </div>
+ </div>
+</section>
+
+<section id="experience">
+ <div class="container">
+  <div class="eyebrow">04 / Career</div>
+  <h2>Professional experience.</h2>
+  <p class="section-intro">Progression from enterprise storage engineering
+  into infrastructure technical leadership.</p>
+  <div class="timeline">
+   <article class="job">
+    <div class="job-date">APRIL 2026 – PRESENT</div>
+    <h3>Technical Lead – Infrastructure (Storage & Backup)</h3>
+    <strong>AHEAD</strong>
+    <ul>
+     <li>Lead enterprise Storage and Backup infrastructure operations and provide engineering direction.</li>
+     <li>Own technical delivery, operational performance, resource planning and escalations.</li>
+     <li>Drive production incident management, technical investigations, RCA and corrective actions.</li>
+     <li>Oversee storage availability, capacity, performance, replication, backup and DR readiness.</li>
+     <li>Coordinate with architecture, application, virtualization, network, cloud, vendor and customer teams.</li>
+     <li>Establish operational standards for escalation management, SLA/OLA, documentation and service quality.</li>
+     <li>Developed five Python and PowerShell health-check scripts across infrastructure platforms.</li>
+    </ul>
+   </article>
+   <article class="job">
+    <div class="job-date">APRIL 2024 – MARCH 2026</div>
+    <h3>Senior Systems Engineer – Infrastructure</h3>
+    <strong>AHEAD</strong>
+    <ul>
+     <li>Managed enterprise storage and data protection platforms across customer environments.</li>
+     <li>Delivered storage administration, troubleshooting, performance analysis and capacity management.</li>
+     <li>Supported platform upgrades, migrations, replication and disaster recovery operations.</li>
+    </ul>
+   </article>
+   <article class="job">
+    <div class="job-date">NOVEMBER 2023 – APRIL 2024</div>
+    <h3>Senior System Engineer / Solutions Engineering</h3>
+    <strong>CDI LLC</strong>
+    <ul>
+     <li>Developed infrastructure solution proposals, architecture reviews, high-level designs and requirements matrices.</li>
+     <li>Contributed to storage architecture across data centers and private cloud environments.</li>
+     <li>Worked with IBM SoftLayer, NetApp ONTAP Select and VMware vSphere environments.</li>
+    </ul>
+   </article>
+   <article class="job">
+    <div class="job-date">MAY 2020 – NOVEMBER 2023</div>
+    <h3>Storage Engineering, Migration & Data Protection</h3>
+    <strong>Veltris</strong>
+    <ul>
+     <li>Delivered enterprise NetApp storage migrations and disaster recovery projects.</li>
+     <li>Worked across NetApp, IBM, EMC, software-defined storage and Brocade SAN environments.</li>
+     <li>Supported backup migration, storage administration and customer-facing operations.</li>
+    </ul>
+   </article>
+   <article class="job">
+    <div class="job-date">NOVEMBER 2018 – NOVEMBER 2019</div>
+    <h3>Storage and VMware Migration & QA Engineer</h3>
+    <strong>Calsoft</strong>
+    <ul>
+     <li>Worked on storage and VMware migration projects, testing and quality assurance.</li>
+     <li>Supported infrastructure validation and troubleshooting.</li>
+    </ul>
+   </article>
+   <article class="job">
+    <div class="job-date">MAY 2015 – NOVEMBER 2018</div>
+    <h3>Storage Engineer</h3>
+    <strong>IBM</strong>
+    <ul>
+     <li>Supported enterprise storage infrastructure, administration and production operations.</li>
+     <li>Performed troubleshooting and customer support activities.</li>
+    </ul>
+   </article>
+  </div>
+  <p class="muted" style="font-size:12px">
+   Organizational history: CDI experience was consolidated under AHEAD following a merger.
+   Veltris experience consolidates Wavelabs Technologies and Westagile IT Labs following organizational mergers.
+  </p>
+ </div>
+</section>
+
+<section id="portfolio">
+ <div class="container">
+  <div class="eyebrow">05 / Data Protection Portfolio</div>
+  <h2>Enterprise backup platform exposure.</h2>
+  <div class="grid three">
+   <div class="metric"><strong>18</strong><span>Commvault CommServe environments</span></div>
+   <div class="metric"><strong>98</strong><span>Veeam instances</span></div>
+   <div class="metric"><strong>14</strong><span>Cohesity systems</span></div>
+   <div class="metric"><strong>29</strong><span>Rubrik systems</span></div>
+   <div class="metric"><strong>4</strong><span>IBM TSM environments</span></div>
+  </div>
+  <p class="muted" style="font-size:12px;margin-top:15px">
+   Platform portfolio figures as documented in the resume.
+  </p>
+ </div>
+</section>
+
+<section id="certifications">
+ <div class="container">
+  <div class="eyebrow">06 / Credentials</div>
+  <h2>Certifications & education.</h2>
+  <div class="cert-list">
+   <div class="cert">NetApp – 8 certifications spanning NCDA through Hybrid Cloud Professional level</div>
+   <div class="cert">Nutanix – Nutanix 6.5 MCP</div>
+   <div class="cert">Veeam – Veeam Professional</div>
+   <div class="cert">Dell EMC – Dell EMC Professional</div>
+   <div class="cert">VMware – VMware Professional</div>
+   <div class="cert">Data Analysis Using Python</div>
+   <div class="cert">Data Science for Business – Level 1</div>
+   <div class="cert">Enterprise Design Thinking Practitioner</div>
+   <div class="cert">Enterprise Design Thinking Co-Creator</div>
+  </div>
+  <div class="card" style="margin-top:20px">
+   <div class="project-type">Education</div>
+   <h3>Master of Technology (M.Tech) – Bio Chemical Engineering</h3>
+   <p>Jawaharlal Nehru Technological University (JNTU), Hyderabad · January 2025</p>
+  </div>
+ </div>
+</section>
+
+<section id="contact">
+ <div class="container">
+  <div class="contact">
+   <div class="eyebrow">07 / Connect</div>
+   <h2>Let's build resilient enterprise infrastructure.</h2>
+   <p>
+    Open to Enterprise Infrastructure, Storage Engineering,
+    Data Protection, Platform Engineering and Infrastructure
+    Leadership opportunities in India and internationally.
+   </p>
+   <div class="actions" style="justify-content:center">
+    <a class="btn primary" href="mailto:venkatesh.technical@gmail.com">Email Me</a>
+    <a class="btn secondary" href="https://www.linkedin.com/in/venkatesh-mamidala-b25a4252/" target="_blank" rel="noopener">LinkedIn ↗</a>
+    <a class="btn secondary" href="https://github.com/venkateshtechnical-code" target="_blank" rel="noopener">GitHub ↗</a>
+    <a class="btn secondary" href="Venkatesh_Mamidala_Enterprise_Infrastructure_CV.pdf" download>Resume PDF ↓</a>
+   </div>
+   <p style="font-size:12px">Hyderabad, India · venkatesh.technical@gmail.com</p>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="container footer-inner">
+  <span>© <span id="year"></span> Venkatesh Mamidala</span>
+  <span>Enterprise Infrastructure & Platforms Technical Lead</span>
+  <span>Built around engineering. Designed for impact.</span>
+ </div>
+</footer>
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+document.querySelectorAll(".navlinks a").forEach(link=>{
+ link.addEventListener("click",()=>{
+  document.querySelector(".navlinks").classList.remove("open");
+ });
+});
+</script>
+</body>
+</html>
